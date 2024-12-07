@@ -1,0 +1,424 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱与权益</title>
+    <script src="style.js"></script>
+    <style>
+        body {
+	font-family: "幼圆";
+	margin: 0;
+	padding: 0;
+	background-color: pink;
+	margin-top: 2px;
+        }
+        header {
+            background-color:#F7B2B2;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a:hover {
+            background-color: black;
+        }
+        .logo img{
+            width: 500px;
+        }
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            padding: 1.1rem;
+        }
+    .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            background-color: pink;
+            overflow: hidden;
+            position: relative;
+        }
+    .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+        }
+    .hero-content {
+            text-align: center;
+            color: #333;
+            z-index: 1;
+            position: relative;
+        }
+    .carousel-control-prev,
+    .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1;
+        }
+    .carousel-control-prev {
+            left: 10px;
+        }
+    .carousel-control-next {
+            right: 10px;
+        }
+    .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            padding: 1rem;
+            width: 400px;
+            text-align: center;
+        }
+    .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+    .card img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color:#F7B2B2;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            bottom: 0;
+        }
+    .heard {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+        section {
+	padding: 2rem 0;
+	color: #FFF;
+        }
+    .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    .hero.hero-content h1 {
+            font-size: xx-large;
+        }
+    .cards1 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    .intro {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+    .carousel {
+            position: relative;
+            width: 850px;
+            height: 600px;
+            overflow: hidden;
+        }
+    .carousel-inner {
+            display: flex;
+            width: 850px;
+            height: 600px;
+            transition: transform 0.5s ease;
+        }
+    .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+    .carousel-item img {
+            width: 850px;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 15px;
+            display: flex;
+        }
+    .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+    .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    .dot.active {
+            background-color: #333;
+        }
+        ul a {
+            text-decoration: none;
+            color: crimson;
+            font-size: larger;
+        }
+    .community {
+            position: relative;
+        }
+    .signup-form {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            margin-right: 100px;
+            border-radius: 9px;
+            text-align: center;
+        }
+    .news-container {
+            width: 100%;
+            background-color: #222;
+            color: #fff;
+            padding: 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    .news {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 15s linear infinite;
+            font-size: x-large;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    .time-greeting {
+            text-align: center;
+            margin: 20px 0;
+        }
+    .time-greeting span {
+	display: block;
+	margin: 5px 0;
+	font-family: Verdana, Geneva, sans-serif;
+        }
+        p{
+            font-size:large;
+        }
+       
+    .video-section {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+ 
+    .legal-news {
+            background-color: pink;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+    .legal-news a {
+            animation: blink 1s infinite;
+            color: crimson;
+        }
+        @keyframes blink {
+            0% {
+                color: #ff0000;
+            }
+            50% {
+                color: #000000;
+            }
+            100% {
+                color: #ff0000;
+            }
+        }
+    
+    .transition-line {
+            border-top: 2px solid #000;
+            margin: 2rem 0;
+        }
+        .tp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.tp > div {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.tp img {
+    width: 100%;
+    height: 500px;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="heard">
+            <div class="logo">
+                <img src="./6.jpg" alt="" width="407" height="89">
+            </div>
+        </div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="love.html">恋爱权益</a></li>
+                    <li><a href="marry.html">婚姻权益</a></li>
+                    <li><a href="online.html">在线咨询</a></li>
+                    <li><a href="share.html">交流分享</a></li>
+                    <li><a href="login.html">登录注册</a></li>
+                </ul>
+            </nav>
+        </header>
+      <main>
+            <section class="hero"></section>
+            <section class="tp">
+                <div>
+                    <img src="./9.jpg" alt="">
+                </div>
+            </section>
+            
+            <section class="intro">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./1.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./2.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./3.jpg" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./4.jpg" alt="Image 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" onClick="prevSlide()">&#10094;</button>
+                    <button class="carousel-control-next" onClick="nextSlide()">&#10095;</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
+            </section>
+            <div class="transition-line"></div>
+            <section>
+                <h2 class="section-title">爱情中权利的意义</h2>
+                <p>&nbsp;&nbsp;爱情，作为人类最为珍贵的情感体验之一，不仅仅是两颗心灵的相互吸引，更是一种权利与责任的交织。在爱情中拥有权利，意味着个体能够在关系中自主地表达情感、做出选择，并得到对方的尊重和理解。这种权利的拥有，不仅有助于立健康、平等的情感关系，还能促进个人的成长与幸福。
+                首先，爱情中的权利体现了个体的自主性和自尊。在任何一段关系中，个体的意愿和选择都应被尊重。拥有爱情的权利，意味着我们能够自由地选择所爱的人，表达自己的情感，而不必受到外界不合理干涉。这种自主性不仅增强了自尊心，还能让人在关系中感受到自我价值的实现。正如某位情感专家所言：“爱情中的主动权是一种有益的个性特质，是建立健康成熟恋爱关系的关键因素。”
+                其次，爱情中的权利对于建立互信关系至关重要。尊重是爱情的基石，双方只有在尊重彼此意愿和界限的基础上，才能建立起真正的信任。没有尊重的爱情，只会是控制和压迫的温床，最终导致关系的破裂。例如，在决策过程中，双方应尊重彼此的意见，愿意倾听和接纳不同的观点，这样的关系才能持久稳定。
+                此外，爱情中的权利还包括了自我成长的责任。爱情不仅是享受甜蜜和幸福的过程，也是彼此扶持、共同成长的机会。拥有爱情的权利，意味着我们需要不断自我提升，学会更好地理解和包容对方。正如一篇文章中提到的：“努力地提升自己，让自己活出自己的样子，唯有不断提升了自己才是你的撒手锏，优秀的你必然能够遇到优秀的恋人。”
+                然而，爱情中的权利并非绝对自由，它同样伴随着责任。爱情是一种双向的给予与接受，任何一方的权利都应在不伤害对方的前提下行使。滥用爱情的权利，只会导致关系的失衡和破裂。真正的爱情应当是建立在相互尊重、平等和信任的基础之上，双方共同努力，维护这段珍贵的情感纽带。
+                综上所述，爱情中拥有权利不仅是个体自主性的体现，更是建立健康、稳定情感关系的前提。它要求我们在享受爱情带来的美好时，不忘尊重与责任，共同营造一个平等、和谐的爱情环境。只有这样，我们才能在爱情中收获真正的幸福和成长。</p>
+</section>
+          
+            <div class="transition-line"></div>
+        
+            <section class="video-section">
+                <video controls>
+                    <source src="./1b4e1ca50ec8894a92ea159b4b0c6e94.mp4" type="video/mp4">
+                    你的浏览器不支持视频播放。
+                </video>
+            </section>
+      
+            <div class="transition-line"></div>
+        </main>
+      
+        <section class="legal-news">
+            <h2 class="section-title">法律动态</h2>
+            <p>
+            <a href="https://www.gov.cn/banshi/2005-05/25/content_847.htm">新婚姻法解释出台，明确财产分配细节。</a></p>
+            <p><br>
+            <a href="https://www.gov.cn/banshi/2005-05/25/content_847.htm">恋爱期间财产纠纷案例增多，法律专家解读权益保护。</a></p>
+            <p><br>
+            <a href="https://www.gov.cn/banshi/2005-05/25/content_847.htm">婚姻权益保障研讨会召开，推动相关法律完善。</a></p>
+            <p><br>
+            <a href="https://www.gov.cn/banshi/2005-05/25/content_847.htm">在线法律咨询平台助力维护爱与权益。</a></p>
+            <p><br>
+              <a href="https://www.gov.cn/banshi/2005-05/25/content_847.htm">法律动态：关注恋爱婚姻中的权益保护新趋势。</a>
+            </p>
+        </section>
+        <footer>
+            <p>
+                <div class="time-greeting">
+                    <span id="time"></span>
+                    <span id="greeting"></span>
+                    <span>爱与权</span>
+                </div>
+            </p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const carouselInner = document.querySelector('.carousel-inner');
+                const dots = document.querySelectorAll('.dot');
+                let currentIndex = 0;
+
+                function showSlide(index) {
+                    carouselInner.style.transform = `translateX(-${index * 100}%)`;
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    dots[index].classList.add('active');
+                }
+
+                dots.forEach(dot => {
+                    dot.addEventListener('click', function () {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        currentIndex = index;
+                        showSlide(index);
+                    });
+                });
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % dots.length;
+                    showSlide(currentIndex);
+                }, 2000);
+            });
+        </script>
+    </main>
+</body>
+</html>
+  

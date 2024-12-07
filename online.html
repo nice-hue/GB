@@ -1,0 +1,179 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱与权益</title>
+    <script src="style.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+             background-color: #f2d4d4;
+            min-height: 100vh; /* 设置最小高度为视口高度 */
+            display: flex;
+            flex-direction: column; /* 使主体内容按列布局 */
+        }
+        header {
+            background-color:#F7B2B2;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a:hover {
+            background-color: black;
+        }
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            padding: 1.1rem;
+        }
+       .heard {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+        p {
+            font-size: large;
+        }
+       .logo img {
+            width: 500px;
+        }
+        main {
+            flex: 1; /* 让 main 区域占据剩余空间 */
+        }
+        footer {
+            background-color:#F7B2B2;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto; /* 使页脚自动推到底部 */
+        }
+        .form-container {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    h2 {
+	text-align: center;
+	color: #F7B2B2;
+	font-family: "幼圆";
+    }
+
+    label {
+        margin-top: 15px;
+        display: block;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Ensure padding doesn't increase width */
+    }
+
+    input:focus, textarea:focus, select:focus {
+        border-color: palevioletred;
+        outline: none;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px;
+        background-color: #F7B2B2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+
+    button:hover {
+        background-color: darkred;
+    }
+
+    /* Add some margin below the last form element */
+    .form-container label:last-of-type {
+        margin-bottom: 15px;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="heard">
+            <div class="logo">
+                <img src="./6.jpg" alt="" width="407" height="89">
+            </div>
+        </div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="love.html">恋爱权益</a></li>
+                    <li><a href="marry.html">婚姻权益</a></li>
+                    <li><a href="online.html">在线咨询</a></li>
+                    <li><a href="share.html">交流分享</a></li>
+                    <li><a href="login.html">登录注册</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="form-container">
+                <h2>问题咨询</h2>
+                <form id="consultation-form">
+                  <label for="name">姓名:</label>
+                  <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+                  <label for="email">邮箱:</label>
+                  <input type="email" id="email" name="email" required placeholder="请输入您的邮箱">
+                  <label for="phone">联系电话:</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="请输入您的电话" pattern="[0-9]{10,11}">
+                  <label for="question-type">咨询类型:</label>
+                  <select id="question-type" name="question-type" required>
+                    <option value="">请选择咨询类型</option>
+                    <option value="love">恋爱权益</option>
+                    <option value="marriage">婚姻权益</option>
+                    <option value="other">其他</option>
+                  </select>
+                  <label for="message">咨询内容:</label>
+                  <textarea id="message" name="message" rows="4" required placeholder="请详细描述您的问题"></textarea>
+                  <label for="attachment">附件（可选）:</label>
+                  <input type="file" id="attachment" name="attachment" accept=".jpg,.png,.pdf">
+                  <label>
+                    <input type="checkbox" name="subscribe" value="yes">
+                    我希望接收更新和信息 </label>
+                  <button type="submit">提交咨询</button>
+                </form>
+                
+              </div>
+        </main>
+        
+    </main>
+
+    <footer>
+        <p>
+            <div class="time-greeting">
+                <span id="time"></span>
+                <span id="greeting"></span>
+                <span>爱与权</span>
+            </div>
+        </p>
+    </footer>
+  
+</body>
+</html>

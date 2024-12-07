@@ -1,0 +1,140 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱与权益</title>
+    <script src="style.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           background-color: #f2d4d4;
+        }
+        header {
+            background-color:#F7B2B2;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav a:hover {
+            background-color: black;
+        }
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            padding: 1.1rem;
+        }
+       .heard {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+        p {
+            font-size: large;
+        }
+        .logo img{
+            width: 500px;
+        }
+       .login-form {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+       .login-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+       .login-form input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+       .login-form button {
+            background-color:#F7B2B2;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+       
+       .more-login-options {
+            margin-top: 1rem;
+            text-align: center;
+        }
+       .more-login-options img {
+            width: 30px;
+            height: 30px;
+            margin: 0 0.5rem;
+            cursor: pointer;
+        }
+    .register-option{
+        align-items: center;
+        text-align: center;
+    }
+    footer {
+            background-color: palevioletred;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            bottom: 0;
+        }
+    .login-form h2 {
+	font-family: "幼圆";
+}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="heard">
+            <div class="logo">
+                <img src="./6.jpg" alt="" width="407" height="89">
+            </div>
+        </div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="love.html">恋爱权益</a></li>
+                    <li><a href="marry.html">婚姻权益</a></li>
+                    <li><a href="online.html">在线咨询</a></li>
+                    <li><a href="share.html">交流分享</a></li>
+                    <li><a href="login.html">登录注册</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+           
+            <div class="login-form">
+                <h2>登录/注册</h2>
+                <label for="username">用户名：</label>
+                <input type="text" id="username" name="username">
+                <label for="password">密码：</label>
+                <input type="password" id="password" name="password">
+                <button>登录</button>
+                <div class="more-login-options">
+                    <p>更多登录方式：</p>
+                    <img src="./17.png" alt="QQ 登录">
+                    <img src="./18.png" alt="微信登录">
+                </div>
+            </div>
+            
+            <div class="register-option">
+                <p>还没有账号？<a href="#">立即注册</a></p>
+            </div>
+        </main>
+    </main>
+
+</body>
+</html>
